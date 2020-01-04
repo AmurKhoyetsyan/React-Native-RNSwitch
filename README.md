@@ -1,12 +1,12 @@
-## react-native-RNSwitch
+## React-Native-RNSwitch
 
 <img src="https://raw.githubusercontent.com/AmurKhoyetsyan/React-Native-RNSwitch/master/img/rns.gif" />
 
-#### install react-native-RNSwitch
+#### install React-Native-RNSwitch
 
 if RN version >= 0.60
 
-npm i react-native-RNSwitch
+npm i React-Native-RNSwitch
 
 #### Props
 
