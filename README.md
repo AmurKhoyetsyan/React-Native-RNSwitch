@@ -1,6 +1,6 @@
 ## react-native-RNSwitch
 
-<img src="https://raw.githubusercontent.com/AmurKhoyetsyan/React-Native-RNS/master/img/rns.gif" />
+<img src="https://raw.githubusercontent.com/AmurKhoyetsyan/React-Native-RNSwitch/master/img/rns.gif" />
 
 #### install react-native-RNSwitch
 
