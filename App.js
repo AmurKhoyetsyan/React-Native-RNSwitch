@@ -7,7 +7,7 @@ import {
   Text
 } from 'react-native';
 
-import Switch from './RNSwitch';
+import Switch from 'react-native-rnswitch';
 
 export default class App extends Component {
     constructor(props){
