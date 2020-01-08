@@ -2,11 +2,11 @@
 
 <img src="https://raw.githubusercontent.com/AmurKhoyetsyan/React-Native-RNSwitch/master/img/rns.gif" />
 
-#### install React-Native-RNSwitch
+#### install react-native-rnswitch
 
 if RN version >= 0.60
 
-npm i React-Native-RNSwitch
+npm i react-native-rnswitch
 
 #### Props
 
@@ -30,7 +30,7 @@ npm i React-Native-RNSwitch
         Text
     } from 'react-native';
 
-    import Switch from 'react-native-RNSwitch';
+    import Switch from 'react-native-rnswitch';
 
     export default class App extends Component {
         constructor(props){
