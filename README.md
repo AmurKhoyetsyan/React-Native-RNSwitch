@@ -13,7 +13,8 @@ npm i React-Native-RNSwitch
 | Props            |  Types          | Default         |
 | ---------------- | ----------------| ----------------|
 | value            | Boolean         | false           |
-| onValueChange    | Void            | -               |
+| onValueChange    | Function        | undefined       |
+| endAnimation     | Function        | undefined       |
 | text             | Boolean         | false           |
 | duration         | Number          | 500             |
 | activeOpacity    | Number          | 0.8             |
@@ -38,13 +39,15 @@ npm i React-Native-RNSwitch
                 switchOne: false,
                 switchTwo: false,
                 switchThree: false,
-                switchFour: false
+                switchFour: false,
+                switchFive: false
             };
 
             this._toggleOne = this._toggleOne.bind(this);
             this._toggleTwo = this._toggleTwo.bind(this);
             this._toggleThree = this._toggleThree.bind(this);
             this._toggleFour = this._toggleFour.bind(this);
+            this._toggleFive = this._toggleFive.bind(this);
         }
 
         _toggleOne = value => {
@@ -63,12 +66,17 @@ npm i React-Native-RNSwitch
             this.setState({switchFour: value});
         };
 
+        _toggleFive = value => {
+            this.setState({switchFive: value});
+        };
+
         render(){
             let {
                 switchOne,
                 switchTwo,
                 switchThree,
-                switchFour
+                switchFour,
+                switchFive
             } = this.state;
 
             return (
@@ -78,12 +86,14 @@ npm i React-Native-RNSwitch
                         <ScrollView contentInsetAdjustmentBehavior="automatic">
                             <View style={{padding: 20}}>
                                 <Text>Default</Text>
+                                <Text>onValueChange</Text>
                                 <Switch
                                     value={switchOne}
                                     onValueChange={(value)=>this._toggleOne(value)}
                                 />
                             </View>
                             <View style={{padding: 20}}>
+                                <Text>onValueChange</Text>
                                 <Text>Text : true</Text>
                                 <Switch
                                     value={switchTwo}
@@ -92,6 +102,7 @@ npm i React-Native-RNSwitch
                                 />
                             </View>
                             <View style={{padding: 20}}>
+                                <Text>onValueChange</Text>
                                 <Text>Text : true</Text>
                                 <Text>duration : 200</Text>
                                 <Switch
@@ -102,12 +113,26 @@ npm i React-Native-RNSwitch
                                 />
                             </View>
                             <View style={{padding: 20}}>
+                                <Text>onValueChange</Text>
                                 <Text>Text : true</Text>
                                 <Text>duration : 200</Text>
                                 <Text>activeOpacity : 1</Text>
                                 <Switch
                                     value={switchFour}
                                     onValueChange={(value)=>this._toggleFour(value)}
+                                    text={true}
+                                    duration={200}
+                                    activeOpacity={1}
+                                />
+                            </View>
+                            <View style={{padding: 20}}>
+                                <Text>endAnimation</Text>
+                                <Text>Text : true</Text>
+                                <Text>duration : 200</Text>
+                                <Text>activeOpacity : 1</Text>
+                                <Switch
+                                    value={switchFive}
+                                    endAnimation={(value)=>this._toggleFive(value)}
                                     text={true}
                                     duration={200}
                                     activeOpacity={1}
