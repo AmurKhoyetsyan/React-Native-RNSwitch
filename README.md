@@ -10,14 +10,18 @@ npm i react-native-rnswitch
 
 #### Props
 
-| Props            |  Types          | Default         |
-| ---------------- | ----------------| ----------------|
-| value            | Boolean         | false           |
-| onValueChange    | Function        | undefined       |
-| endAnimation     | Function        | undefined       |
-| text             | Boolean         | false           |
-| duration         | Number          | 500             |
-| activeOpacity    | Number          | 0.8             |
+| Props              |  Types          | Default         |
+| ------------------ | ----------------| ----------------|
+| value              | Boolean         | false           |
+| onValueChange      | Function        | undefined       |
+| endAnimation       | Function        | undefined       |
+| text               | Boolean         | false           |
+| duration           | Number          | 500             |
+| activeOpacity      | Number          | 0.8             |
+| textOnColor        | String          | '#FFFFFF'       |
+| textOffColor       | String          | '#000000'       |
+| backgroundColorOn  | String          | '#0F3311'       |
+| backgroundColorOff | String          | '#CCCCCC'       |
 
 #### Example
 
@@ -136,6 +140,27 @@ npm i react-native-rnswitch
                                     text={true}
                                     duration={200}
                                     activeOpacity={1}
+                                />
+                            </View>
+                            <View style={{padding: 20}}>
+                                <Text>endAnimation</Text>
+                                <Text>Text : true</Text>
+                                <Text>duration : 200</Text>
+                                <Text>activeOpacity : 1</Text>
+                                <Text>textOnColor : '#000000'</Text>
+                                <Text>textOffColor : '#00FF00'</Text>
+                                <Text>backgroundColorOn : '#FF0000'</Text>
+                                <Text>backgroundColorOff : '#00AAFF'</Text>
+                                <Switch
+                                    value={switchFive}
+                                    endAnimation={(value)=>this._toggleFive(value)}
+                                    text={true}
+                                    duration={200}
+                                    activeOpacity={1}
+                                    textOnColor={'#000000'}
+                                    textOffColor={'#00FF00'}
+                                    backgroundColorOn={'#FF0000'}
+                                    backgroundColorOff={'#00AAFF'}
                                 />
                             </View>
                         </ScrollView>
