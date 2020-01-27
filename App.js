@@ -17,7 +17,8 @@ export default class App extends Component {
             switchTwo: false,
             switchThree: false,
             switchFour: false,
-            switchFive: false
+            switchFive: false,
+            switchSix: false
         };
 
         this._toggleOne = this._toggleOne.bind(this);
@@ -25,6 +26,7 @@ export default class App extends Component {
         this._toggleThree = this._toggleThree.bind(this);
         this._toggleFour = this._toggleFour.bind(this);
         this._toggleFive = this._toggleFive.bind(this);
+        this._toggleSix = this._toggleSix.bind(this);
     }
 
     _toggleOne = value => {
@@ -47,13 +49,18 @@ export default class App extends Component {
         this.setState({switchFive: value});
     };
 
+    _toggleSix = value => {
+        this.setState({switchSix: value});
+    };
+
     render(){
         let {
             switchOne,
             switchTwo,
             switchThree,
             switchFour,
-            switchFive
+            switchFive,
+            switchSix
         } = this.state;
 
         return (
@@ -125,8 +132,8 @@ export default class App extends Component {
                             <Text>backgroundColorOn : '#FF0000'</Text>
                             <Text>backgroundColorOff : '#00AAFF'</Text>
                             <Switch
-                                value={switchFive}
-                                endAnimation={(value)=>this._toggleFive(value)}
+                                value={switchSix}
+                                endAnimation={(value)=>this._toggleSix(value)}
                                 text={true}
                                 duration={200}
                                 activeOpacity={1}
